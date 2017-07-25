@@ -1,0 +1,83 @@
+#Предметы
+item.frame_test.name=Тестовая рамка
+item.biome_stabilizer.name=Биомный стабилизатор
+
+#Блоки
+tile.alveary_lighter.name=Магический светильник улья
+tile.transdimensional_apiary.name=Межпространственная пасека
+tile.essentia_container.name=Контейнер эссенции
+tile.frame_analyzer.name=Анализатор рамок
+
+#Вкладка в креативе
+itemGroup.ExForbidden=Ex Forbidden
+
+#Строки для интерфейса
+efgui.biome_stabilizer=Биом: 
+efgui.biome_stabilizer.plains=равнина
+efgui.biome_stabilizer.end=край
+efgui.biome_stabilizer.nether=нижний мир
+efgui.transdimensional_apiary=Межпространственная пасека
+efgui.climate=Климат
+efgui.humidity=Влажность
+efgui.temperature=Температура
+efgui.vis=Вис
+efgui.puzzle=Паззл
+efgui.puzzle_win=Победа!
+
+efgui.yes=да
+efgui.no=нет
+efgui.frame_analyzer.name=Название: 
+efgui.frame_analyzer.damage=Прочность: 
+efgui.frame_analyzer.territory=Территория: x
+efgui.frame_analyzer.mutation=Мутация: x
+efgui.frame_analyzer.life=Срок жизни: x
+efgui.frame_analyzer.production=Продукция: x
+efgui.frame_analyzer.flowering=Опыление: x
+efgui.frame_analyzer.decay=Генетическое увядание: x
+efgui.frame_analyzer.sealed=Sealed: 
+efgui.frame_analyzer.lit=Пещерник: 
+efgui.frame_analyzer.sunlit=Ночник: 
+efgui.frame_analyzer.hellish=Hellish: 
+
+#Для подсказок
+efwidget.test.title=Тестовая подсказка
+efwidget.test.desc=Это тестовая подсказка к межпространственной пасеке. И это очень длинный текст
+
+efwidget.test2.title=Вторая страница
+efwidget.test2.desc=Это вторая страница. И здесь написан какой-то другой текст
+
+efwidget.testerr.title=Отсутствует рамка!
+efwidget.testerr.desc=Шучу, межпространственная пасека не принимает в себе рамки. Она принимает только биомные стабилизаторы
+efwidget.testerr.type=ERROR
+
+#==================ИЗ ФОРЕСТРИ=============================
+errors.noVis.desc=Недостаточно сантивис
+errors.noVis.help=Это устройство потребляет энергию из пробужденных узлов ауры. Снабдите его достаточным количеством сантивис.
+errors.noStabilizer.desc=Отсутствует биомный стабилизатор
+errors.noStabilizer.help=Это устройство требует для работы биомный стабилизатор.
+errors.isRaining.desc=Дождь
+errors.isRaining.help=Только устойчивые летуны могут работать во время дождя.
+errors.noDrone.desc=Нет трутня
+errors.noDrone.help=Спаривание требует наличия трутня.
+errors.noFlower.desc=Нет цветов
+errors.noFlower.help=Пчелы не нашли подходящих цветов. Используйте анализатор пчёл для того, чтобы изучить их предпочитаемые цветы.
+errors.noQueen.desc=Нет королевы
+errors.noQueen.help=Снабдите этот улей королевой или принцессой с трутнем.
+errors.noSky.desc=Небо закрыто
+errors.noSky.help=Улей требует прямой солнечный свет сверху
+errors.notDay.desc=Не дневное время
+errors.notDay.help=Пчелы могут работать только в дневное время
+errors.notGloomy.desc=Недостаточно темно
+errors.notGloomy.help=Пчелы могут работать только в темноте
+errors.notLucid.desc=Недостаточно ярко
+errors.notLucid.help=Пчелы не могут ориентироваться в темноте
+errors.notNight.desc=Не ночное время
+errors.notNight.help=Пчелы могут работать только в ночное время
+errors.tooHot.desc=Слишком жарко
+errors.tooHot.help=Пчелы плавятся в этой жаре и не могут работать. Используйте Определитель ареала для того, чтобы найти более холодный климат.
+errors.tooCold.desc=Слишком холодно
+errors.tooCold.help=Пчелы сжимаются вместе, чтобы выжить здесь. Используйте Определитель ареала, чтобы найти более теплый климат.
+errors.tooHumid.desc=Слишком влажно
+errors.tooHumid.help=Климат здесь сделал крылья пчел слишком влажными, чтобы летать. Используйте Определитель ареала, чтобы найти более сухой климат.
+errors.tooArid.desc=Слишком сухо
+errors.tooArid.help=Сухой климат здесь заставил пчел пересохнуть и не даёт работать. Используйте Определитель ареала, чтобы найти более влажный климат.

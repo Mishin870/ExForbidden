@@ -1,0 +1,83 @@
+#Items
+item.frame_test.name=Test frame
+item.biome_stabilizer.name=Biome stabilizer
+
+#Blocks
+tile.alveary_lighter.name=Magic hive lighter
+tile.transdimensional_apiary.name=Transdimensional apiary
+tile.essentia_container.name=Essentia container
+tile.frame_analyzer.name=Frame analyzer
+
+#Creative tab
+itemGroup.ExForbidden=Ex Forbidden
+
+#Strings for gui
+efgui.biome_stabilizer=Biome: 
+efgui.biome_stabilizer.plains=plains
+efgui.biome_stabilizer.end=end
+efgui.biome_stabilizer.nether=nether
+efgui.transdimensional_apiary=Transdimensional apiary
+efgui.climate=Climate
+efgui.humidity=Humidity
+efgui.temperature=Temperature
+efgui.vis=Vis
+efgui.puzzle=Puzzle
+efgui.puzzle_win=Win!
+
+efgui.yes=yes
+efgui.no=no
+efgui.frame_analyzer.name=Name: 
+efgui.frame_analyzer.damage=Max damage: 
+efgui.frame_analyzer.territory=Territory: x
+efgui.frame_analyzer.mutation=Mutation: x
+efgui.frame_analyzer.life=Lifespan: x
+efgui.frame_analyzer.production=Production: x
+efgui.frame_analyzer.flowering=Flowering: x
+efgui.frame_analyzer.decay=Genetic decay: x
+efgui.frame_analyzer.sealed=Sealed: 
+efgui.frame_analyzer.lit=Cave: 
+efgui.frame_analyzer.sunlit=Nocturnal: 
+efgui.frame_analyzer.hellish=Hellish: 
+
+#For hints
+efwidget.test.title=Test ledge
+efwidget.test.desc=The test ledge that will be in transdimensional_apiary
+
+efwidget.test2.title=Two ledge
+efwidget.test2.desc=The two ledge of transdimensional_apiary
+
+efwidget.testerr.title=Test error message!
+efwidget.testerr.desc=Test error message description!
+efwidget.testerr.type=ERROR
+
+#=====================FROM FORESTRY===========================
+errors.noVis.desc=Not enough centivis
+errors.noVis.help=This machine consumes energy from energized nodes. Supply this machine with enough centivis.
+errors.noStabilizer.desc=Missing biome stabilizer
+errors.noStabilizer.help=This machine requires biome stabilizer to work.
+errors.isRaining.desc=Rain
+errors.isRaining.help=Only tolerant fliers can work in the rain.
+errors.noDrone.desc=No drone
+errors.noDrone.help=Mating requires a drone present.
+errors.noFlower.desc=No flowers
+errors.noFlower.help=Hive members are not finding the right flowers. Use the Beealyzer to learn their flower preference.
+errors.noQueen.desc=No queen
+errors.noQueen.help=Supply this hive with a queen or a princess and a drone.
+errors.noSky.desc=Sky obstructed
+errors.noSky.help=The hive requires direct sunlight from above.
+errors.notDay.desc=Not daytime
+errors.notDay.help=The bees can only work during the daytime.
+errors.notGloomy.desc=Not dark enough
+errors.notGloomy.help=The bees can only work in darkness.
+errors.notLucid.desc=Not bright enough
+errors.notLucid.help=The bees have trouble navigating in the dark.
+errors.notNight.desc=Not nighttime
+errors.notNight.help=The bees can only work during the night.
+errors.tooHot.desc=Too Hot
+errors.tooHot.help=The bees are melting in the heat here and unable to work. Use a Habitat Locator to find a cooler climate.
+errors.tooCold.desc=Too Cold
+errors.tooCold.help=The bees are huddled together to survive the freezing cold here. Use a Habitat Locator to find a warmer climate.
+errors.tooHumid.desc=Too Humid
+errors.tooHumid.help=The climate here has made the bees' wings too damp to fly. Use a Habitat Locator to find a dryer climate.
+errors.tooArid.desc=Too Dry
+errors.tooArid.help=The dry climate here has made the bees parched and unable to work. Use a Habitat Locator to find a wetter climate.

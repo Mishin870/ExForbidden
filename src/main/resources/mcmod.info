@@ -1,0 +1,16 @@
+[
+{
+  "modid": "exforbidden",
+  "name": "ExForbidden",
+  "description": "Analogies to popular skyblock forbidden items",
+  "version": "1.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Mishin870"],
+  "credits": "The Forge and FML guys",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
