@@ -1,4 +1,4 @@
-package com.mishin870.exforbidden.forestrycomp.frame_analyzer;
+package com.mishin870.exforbidden.forestrycomp.extra_carpenter;
 
 import java.util.List;
 
@@ -16,12 +16,12 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class FrameAnalyzer extends Block implements ITileEntityProvider {
+public class ExtraCarpenter extends Block implements ITileEntityProvider {
 	private static final float MINH = 0.0f;
 	private static final float MAXH = 1.0f;
-	private static final float MAXV = 0.875f;
+	private static final float MAXV = 0.75f;
 	
-	public FrameAnalyzer(String unloc) {
+	public ExtraCarpenter(String unloc) {
 		super(Material.wood);
 		setBlockName(unloc);
 		setBlockTextureName(Main.MODID + ":" + unloc);
@@ -39,7 +39,7 @@ public class FrameAnalyzer extends Block implements ITileEntityProvider {
 		if (player.isSneaking()) {
 			return false;
 		} else {
-			player.openGui(Main.instance, EFGuiHandler.FRAME_ANALYZER, world, x, y, z);
+			player.openGui(Main.instance, EFGuiHandler.EXTRA_CARPENTER, world, x, y, z);
 			return true;
 		}
 	}
@@ -61,7 +61,7 @@ public class FrameAnalyzer extends Block implements ITileEntityProvider {
 	
 	@Override
 	public TileEntity createNewTileEntity(World w, int meta) {
-		TileEntityFrameAnalyzer f = new TileEntityFrameAnalyzer();
+		TileEntityExtraCarpenter f = new TileEntityExtraCarpenter();
 		f.blockMetadata = meta;
 		return f;
 	}

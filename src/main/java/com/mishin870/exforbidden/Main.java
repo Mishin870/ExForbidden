@@ -1,5 +1,6 @@
 package com.mishin870.exforbidden;
 
+import com.mishin870.exforbidden.comp.EnumModsComp;
 import com.mishin870.exforbidden.net.NetworkPacketHandler;
 import com.mishin870.exforbidden.props.EFConfig;
 import com.mishin870.exforbidden.props.EFInternalConfig;
@@ -21,7 +22,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.common.MinecraftForge;
 
-@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION)
+@Mod(modid = Main.MODID, name = Main.MODNAME, version = Main.VERSION, dependencies = EnumModsComp.softDependencies)
 public class Main {
 	public static final String MODID = "exforbidden";
 	public static final String MODNAME = "ExForbidden";

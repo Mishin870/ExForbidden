@@ -7,8 +7,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
 
-import com.mishin870.exforbidden.EFLogger;
 import com.mishin870.exforbidden.Main;
+import com.mishin870.exforbidden.utils.EFLogger;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;

@@ -3,9 +3,9 @@ package com.mishin870.exforbidden.net;
 import java.io.DataInputStream;
 import java.io.IOException;
 
-import com.mishin870.exforbidden.EFLogger;
 import com.mishin870.exforbidden.Main;
 import com.mishin870.exforbidden.forestrycomp.transdim_apiary.TileEntityTransdimensionalApiary;
+import com.mishin870.exforbidden.utils.EFLogger;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

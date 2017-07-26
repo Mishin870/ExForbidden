@@ -1,10 +1,17 @@
-package com.mishin870.exforbidden;
+package com.mishin870.exforbidden.utils;
 
 import cpw.mods.fml.common.FMLLog;
 import org.apache.logging.log4j.Level;
 
+import com.mishin870.exforbidden.Main;
+
 public class EFLogger {
 	
+	/**
+	 * Базовая функция логгера
+	 * @param logLevel
+	 * @param object любое сообщение (для String.valueOf(...))
+	 */
 	public static void log(Level logLevel, Object object) {
 		FMLLog.log(Main.MODNAME, logLevel, String.valueOf(object), new Object[0]);
 	}
