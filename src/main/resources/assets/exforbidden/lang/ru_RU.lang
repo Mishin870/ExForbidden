@@ -7,6 +7,7 @@ tile.alveary_lighter.name=Магический светильник улья
 tile.transdimensional_apiary.name=Межпространственная пасека
 tile.essentia_container.name=Контейнер эссенции
 tile.frame_analyzer.name=Анализатор рамок
+tile.extra_carpenter.name=Улучшенный плотник
 
 #Вкладка в креативе
 itemGroup.ExForbidden=Ex Forbidden

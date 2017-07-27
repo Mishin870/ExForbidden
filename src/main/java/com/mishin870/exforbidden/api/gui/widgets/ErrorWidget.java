@@ -1,6 +1,6 @@
 package com.mishin870.exforbidden.api.gui.widgets;
 
-import com.mishin870.exforbidden.utils.StringUtils;
+import com.mishin870.exforbidden.api.utils.StringUtils;
 
 import forestry.api.core.IErrorState;
 import net.minecraft.client.gui.inventory.GuiContainer;

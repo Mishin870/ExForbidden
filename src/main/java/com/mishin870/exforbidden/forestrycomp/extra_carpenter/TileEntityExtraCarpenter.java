@@ -1,25 +1,41 @@
 package com.mishin870.exforbidden.forestrycomp.extra_carpenter;
 
+import com.mishin870.exforbidden.gui.SimpleFluidTank;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidTankInfo;
+import net.minecraftforge.fluids.IFluidHandler;
 
-public class TileEntityExtraCarpenter extends TileEntity implements IInventory {
-	private ItemStack inv;
+public class TileEntityExtraCarpenter extends TileEntity implements IInventory, IFluidHandler {
+	private ItemStack[] inventory;
+	private SimpleFluidTank tank;
 	
 	public TileEntityExtraCarpenter() {
-		
+		inventory = new ItemStack[getSizeInventory()];
+		//fluidStack = new FluidStack(FluidRegistry.LAVA, 3500);
+		tank = new SimpleFluidTank(10000);
+	}
+	
+	//Заглушка, т.к. танк в плотнике один и можно реализовать такой функцией
+	public FluidStack getFluidInTank() {
+		return tank.getFluid();
 	}
 	
 	@Override
 	public int getSizeInventory() {
-		return 1;
+		return 21;
 	}
 	
 	@Override
 	public ItemStack getStackInSlot(int slot) {
-		return slot == 0 ? inv : null;
+		return inventory[slot];
 	}
 	
 	@Override
@@ -45,10 +61,8 @@ public class TileEntityExtraCarpenter extends TileEntity implements IInventory {
 	
 	@Override
 	public void setInventorySlotContents(int i, ItemStack itemStack) {
-		if (i == 0) {
-			inv = itemStack;
-			markDirty();
-		}
+		inventory[i] = itemStack;
+		markDirty();
 	}
 
 	@Override
@@ -63,7 +77,7 @@ public class TileEntityExtraCarpenter extends TileEntity implements IInventory {
 	
 	@Override
 	public int getInventoryStackLimit() {
-		return 1;
+		return 64;
 	}
 
 	@Override
@@ -80,6 +94,36 @@ public class TileEntityExtraCarpenter extends TileEntity implements IInventory {
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemStack) {
 		return true;
+	}
+	
+	@Override
+	public int fill(ForgeDirection from, FluidStack resource, boolean doFill) {
+		return tank.fill(resource, doFill);
+	}
+	
+	@Override
+	public FluidStack drain(ForgeDirection from, FluidStack resource, boolean doDrain) {
+		return tank.drain(resource, doDrain);
+	}
+	
+	@Override
+	public FluidStack drain(ForgeDirection from, int maxDrain, boolean doDrain) {
+		return tank.drain(maxDrain, doDrain);
+	}
+	
+	@Override
+	public boolean canFill(ForgeDirection from, Fluid fluid) {
+		return true;
+	}
+	
+	@Override
+	public boolean canDrain(ForgeDirection from, Fluid fluid) {
+		return true;
+	}
+	
+	@Override
+	public FluidTankInfo[] getTankInfo(ForgeDirection from) {
+		return new FluidTankInfo[] {tank.getInfo()};
 	}
 	
 }

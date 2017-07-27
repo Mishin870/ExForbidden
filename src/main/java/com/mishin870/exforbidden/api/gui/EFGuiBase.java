@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.mishin870.exforbidden.api.SessionVars;
 import com.mishin870.exforbidden.api.gui.widgets.ErrorWidget;
+import com.mishin870.exforbidden.api.gui.widgets.SimpleWidget;
 import com.mishin870.exforbidden.api.gui.widgets.Widget;
 
 import forestry.api.core.IErrorSource;
@@ -13,6 +14,7 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.IIcon;
 
 public abstract class EFGuiBase extends GuiContainer {
 	protected WidgetManager widgetManager = new WidgetManager(this);
@@ -27,6 +29,10 @@ public abstract class EFGuiBase extends GuiContainer {
 		initWidgers(inventory);
 		widgetManager.initErrors();
 		widgetManager.lastDraw = System.currentTimeMillis();
+	}
+	
+	protected void addSimpleWidget(String key, boolean isRight, IIcon icon) {
+		this.widgetManager.add(new SimpleWidget(this, "efwidget." + key, isRight, icon));
 	}
 	
 	protected void initWidgers(IInventory inventory) {}

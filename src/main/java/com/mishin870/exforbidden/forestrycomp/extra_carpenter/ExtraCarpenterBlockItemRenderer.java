@@ -6,11 +6,11 @@ import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.IItemRenderer;
 
-public class FrameAnalyzerBlockItemRenderer implements IItemRenderer {
+public class ExtraCarpenterBlockItemRenderer implements IItemRenderer {
 	private ExtraCarpenterRenderer fr;
 	private TileEntityExtraCarpenter te;
 	
-	public FrameAnalyzerBlockItemRenderer(ExtraCarpenterRenderer fr, TileEntityExtraCarpenter te) {
+	public ExtraCarpenterBlockItemRenderer(ExtraCarpenterRenderer fr, TileEntityExtraCarpenter te) {
 		this.fr = fr;
 		this.te = te;
 	}

@@ -9,6 +9,13 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
 public class ContainerExtraCarpenter extends EFContainerBase {
+	private static final int SLOT_CRAFT_BEGIN = 0;
+	private static final int SLOT_CRAFT_COUNT = 9;
+	private static final int SLOT_INV_BEGIN = SLOT_CRAFT_BEGIN + SLOT_CRAFT_COUNT;
+	private static final int SLOT_INV_COUNT = 9;
+	private static final int SLOT_PRE = SLOT_INV_BEGIN + SLOT_INV_COUNT;
+	private static final int SLOT_OUT = SLOT_PRE + 1;
+	private static final int SLOT_INPUT_LIQUID = SLOT_OUT + 1;
 	public TileEntityExtraCarpenter carpenter;
 	
 	public ContainerExtraCarpenter(InventoryPlayer inventoryPlayer, TileEntityExtraCarpenter carpenter) {
@@ -16,7 +23,35 @@ public class ContainerExtraCarpenter extends EFContainerBase {
 		this.carpenter = carpenter;
 		
 		//addSlotToContainer(new SlotFrame(analyzer, 0, 153, 6));
-		addPlayerInventory(inventoryPlayer, 8, 140);
+		int x = 8;
+		int y;
+		int i;
+		for (i = SLOT_INV_BEGIN; i < SLOT_INV_BEGIN + SLOT_INV_COUNT; i++) {
+			addSlotToContainer(new Slot(carpenter, i, x, 90));
+			x += 16;
+		}
+		
+		x = 10;
+		y = 20;
+		i = SLOT_CRAFT_BEGIN;
+		while (i < SLOT_CRAFT_BEGIN + SLOT_CRAFT_COUNT) {
+			addSlotToContainer(new Slot(carpenter, i, x, y));
+			x += 16;
+			i++;
+			addSlotToContainer(new Slot(carpenter, i, x, y));
+			x += 16;
+			i++;
+			addSlotToContainer(new Slot(carpenter, i, x, y));
+			i++;
+			x += 16;
+			y += 16;
+		}
+		
+		addSlotToContainer(new Slot(carpenter, SLOT_PRE, 80, 51));
+		addSlotToContainer(new Slot(carpenter, SLOT_OUT, 120, 56));
+		addSlotToContainer(new Slot(carpenter, SLOT_INPUT_LIQUID, 120, 20));
+		
+		addPlayerInventory(inventoryPlayer, 8, 118);
 	}
 	
 	@Override

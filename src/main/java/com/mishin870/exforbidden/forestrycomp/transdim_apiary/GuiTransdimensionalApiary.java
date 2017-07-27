@@ -8,9 +8,11 @@ import com.mishin870.exforbidden.api.gui.widgets.ClimateWidget;
 import com.mishin870.exforbidden.api.gui.widgets.SimpleWidget;
 import com.mishin870.exforbidden.api.gui.widgets.VisWidget;
 import com.mishin870.exforbidden.gui.PuzzleWidget;
+import com.mishin870.exforbidden.props.EFTextures;
 
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
 
 public class GuiTransdimensionalApiary extends EFGuiBase {
@@ -34,15 +36,11 @@ public class GuiTransdimensionalApiary extends EFGuiBase {
 	@Override
 	protected void initWidgers(IInventory inventory) {
 		this.widgetManager.add(new ClimateWidget(this, (TileEntityTransdimensionalApiary) tile));
-		this.widgetManager.add(new VisWidget(this, (TileEntityTransdimensionalApiary) tile));
+		this.widgetManager.add(new VisWidget(this, (TileEntityTransdimensionalApiary) tile, EFTextures.getImage("efwidget.vis")));
 		this.widgetManager.add(new PuzzleWidget(this));
 		//this.addSimpleWidget("test", true);
 		//this.addSimpleWidget("test2", true);
 		//this.addSimpleWidget("testerr", false);
-	}
-	
-	private void addSimpleWidget(String key, boolean isRight) {
-		this.widgetManager.add(new SimpleWidget(this, "efwidget." + key, isRight));
 	}
 
 	@Override

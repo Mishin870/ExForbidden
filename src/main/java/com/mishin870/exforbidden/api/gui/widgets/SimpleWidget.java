@@ -1,7 +1,7 @@
 package com.mishin870.exforbidden.api.gui.widgets;
 
+import com.mishin870.exforbidden.api.utils.StringUtils;
 import com.mishin870.exforbidden.props.EFTextures;
-import com.mishin870.exforbidden.utils.StringUtils;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.Minecraft;
@@ -17,20 +17,20 @@ public class SimpleWidget extends Widget {
 	 * @param gui ссылка на интерфейс 
 	 * @param key ключ в lang файле
 	 */
-	public SimpleWidget(GuiContainer gui, String key, boolean isRight) {
+	public SimpleWidget(GuiContainer gui, String key, boolean isRight, IIcon icon) {
 		super(gui, getColorScheme(key + ".type"), key, isRight);
-		this.icon = getIcon(key);
+		this.icon = icon; //getIcon(key);
 		Minecraft mc = FMLClientHandler.instance().getClient().getMinecraft();
 		int lineHeight = StringUtils.getTextHeigth(mc.fontRenderer, this.maxTextWidth,
 				new String[] {StatCollector.translateToLocal(key + ".title"), StatCollector.translateToLocal(key + ".desc")});
 		this.maxHeight = lineHeight + 20;
 	}
 	
-	public SimpleWidget(GuiContainer gui, String key) {
-		this(gui, key, true);
+	public SimpleWidget(GuiContainer gui, String key, IIcon icon) {
+		this(gui, key, true, icon);
 	}
 	
-	private static IIcon getIcon(String key) {
+	/*private static IIcon getIcon(String key) {
 		if (StatCollector.canTranslate(key + ".img")) {
 			IIcon ret = EFTextures.getImage(StatCollector.translateToLocal(key + ".img"));
 			if (ret == null) {
@@ -44,7 +44,7 @@ public class SimpleWidget extends Widget {
 		} else {
 			return EFTextures.getImage(key);
 		}
-	}
+	}*/
 	
 	private static WidgetColors getColorScheme(String key) {
 		if (StatCollector.canTranslate(key)) {
