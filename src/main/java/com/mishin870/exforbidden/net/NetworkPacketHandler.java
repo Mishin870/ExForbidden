@@ -27,7 +27,7 @@ public class NetworkPacketHandler {
 	}
 	
 	public static enum PacketType {
-		UNKNOWN, TRANSDIMENSIONAL_APIARY_CHARGE_UPDATE, CONTAINER_UPDATE_ERRORS;
+		UNKNOWN, TRANSDIMENSIONAL_APIARY_CHARGE_UPDATE, CONTAINER_UPDATE_ERRORS, FLUID_TANK_UPDATE;
 	}
 	
 	public NetworkPacketHandler() {
@@ -80,6 +80,9 @@ public class NetworkPacketHandler {
 			packet.process(player);
 		} else if (eventId == PacketType.CONTAINER_UPDATE_ERRORS.ordinal()) {
 			PacketContainerUpdateErrors packet = new PacketContainerUpdateErrors(data);
+			packet.process(player);
+		} else if (eventId == PacketType.FLUID_TANK_UPDATE.ordinal()) {
+			PacketFluidTankUpdate packet = new PacketFluidTankUpdate(data);
 			packet.process(player);
 		}
 	}

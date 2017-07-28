@@ -6,6 +6,7 @@ import com.mishin870.exforbidden.Main;
 import com.mishin870.exforbidden.api.gui.EFGuiBase;
 import com.mishin870.exforbidden.gui.PuzzleWidget;
 
+import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
@@ -15,7 +16,7 @@ import net.minecraftforge.fluids.FluidStack;
 
 public class GuiExtraCarpenter extends EFGuiBase {
 	private static final ResourceLocation res = new ResourceLocation(Main.MODID + ":textures/gui/extra_carpenter.png");
-	private static final ResourceLocation terrain = new ResourceLocation("/terraing.png");
+	//private static final ResourceLocation terrain = new ResourceLocation("/terraing.png");
 	private InventoryPlayer playerInv;
 	private TileEntityExtraCarpenter carpenter;
 
@@ -29,9 +30,9 @@ public class GuiExtraCarpenter extends EFGuiBase {
 	@Override
 	protected void initWidgers(IInventory inventory) {
 		this.widgetManager.add(new PuzzleWidget(this));
-		// this.addSimpleWidget("test", true);
-		// this.addSimpleWidget("test2", true);
-		// this.addSimpleWidget("testerr", false);
+		//this.addSimpleWidget("test", true);
+		//this.addSimpleWidget("test2", true);
+		//this.addSimpleWidget("testerr", false);
 	}
 
 	@Override
@@ -44,18 +45,70 @@ public class GuiExtraCarpenter extends EFGuiBase {
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 		FluidStack fluid = carpenter.getFluidInTank();
-		this.mc.getTextureManager().bindTexture(TextureMap.locationBlocksTexture);
-		IIcon icon = fluid.getFluid().getStillIcon();
-		int fluidLevel = fluid.amount * 58 / 10000;
-		this.drawTexturedModelRectFromIcon(150, 17 + 58 - fluidLevel, icon, 16, fluidLevel);
+		if (fluid != null) {
+			this.mc.getTextureManager().bindTexture(TextureMap.locationBlocksTexture);
+			int fluidLevel = fluid.amount * 58 / 10000;
+			//this.drawTexturedModelRectFromIcon(150, 17 + 58 - fluidLevel, icon, 16, fluidLevel);
+			this.drawFluidPillar(150, 17 + 58 - fluidLevel, fluid.getFluid().getIcon(fluid), fluidLevel);
+		}
 		
-		this.mc.getTextureManager().bindTexture(res);
-		this.drawTexturedModalRect(150, 18, 176, 0, 16, 58);
+		//GL11.glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+		//this.mc.getTextureManager().bindTexture(res);
+		//this.drawTexturedModalRect(150, 17, 176, 0, 16, 58);
 		
 		super.drawGuiContainerForegroundLayer(mouseX, mouseY);
-		
-		//this.mc.renderEngine.bindTexture(fluid.getFluid().getSpriteNumber());
-		//this.drawTexturedModelRectFromIcon(xOffset + 8, yOffset + 143 - height, LiquidDictionary.getCanonicalLiquid("Water").getRenderingIcon(), 16, height);
 	}
-
+	
+	/**
+	 * Рисует столб жидкости с заранее определенной шириной (16)
+	 */
+	private void drawFluidPillar(int x, int y, IIcon icon, int height) {
+		for (int i = 0; i < height; i += 16) {
+			drawTexturedModelRectFromIcon(x, y + i, icon, 16, Math.min(height - i, 16));
+		}
+	}
+	
+	/*
+	public void drawFluid(FluidStack fluid, int level, int x, int y, int width, int height) {
+        IIcon icon = fluid.getFluid().getIcon(fluid);
+        this.mc.getTextureManager().bindTexture(TextureMap.locationBlocksTexture);
+        setGLColorFromInt(fluid.getFluid().getColor(fluid));
+        int fullX = width / 16;
+        int fullY = height / 16;
+        int lastX = width - fullX * 16;
+        int lastY = height - fullY * 16;
+        int fullLvl = (height - level) / 16;
+        int lastLvl = (height - level) - fullLvl * 16;
+        for (int i = 0; i < fullX; i++) {
+            for (int j = 0; j < fullY; j++) {
+                if (j >= fullLvl) {
+                    drawCutIcon(icon, x + i * 16, y + j * 16, 16, 16, j == fullLvl ? lastLvl : 0);
+                }
+            }
+        }
+        for (int i = 0; i < fullX; i++) {
+            drawCutIcon(icon, x + i * 16, y + fullY * 16, 16, lastY, fullLvl == fullY ? lastLvl : 0);
+        }
+        for (int i = 0; i < fullY; i++) {
+            if (i >= fullLvl) {
+                drawCutIcon(icon, x + fullX * 16, y + i * 16, lastX, 16, i == fullLvl ? lastLvl : 0);
+            }
+        }
+        drawCutIcon(icon, x + fullX * 16, y + fullY * 16, lastX, lastY, fullLvl == fullY ? lastLvl : 0);
+    }
+	
+    private final void drawCutIcon(IIcon icon, int x, int y, int width, int height, int cut) {
+        Tessellator tess = Tessellator.instance;
+        tess.startDrawingQuads();
+        tess.addVertexWithUV(x, y + height, 0, icon.getMinU(), icon.getInterpolatedV(height));
+        tess.addVertexWithUV(x + width, y + height, 0, icon.getInterpolatedU(width), icon.getInterpolatedV(height));
+        tess.addVertexWithUV(x + width, y + cut, 0, icon.getInterpolatedU(width), icon.getInterpolatedV(cut));
+        tess.addVertexWithUV(x, y + cut, 0, icon.getMinU(), icon.getInterpolatedV(cut));
+        tess.draw();
+    }
+    
+    private static void setGLColorFromInt(int color) {
+        GL11.glColor4f((color >> 16 & 255) / 255.0F, (color >> 8 & 255) / 255.0F, (color & 255) / 255.0F, 1.0F);
+    }*/
+	
 }

@@ -28,7 +28,7 @@ public class ContainerExtraCarpenter extends EFContainerBase {
 		int i;
 		for (i = SLOT_INV_BEGIN; i < SLOT_INV_BEGIN + SLOT_INV_COUNT; i++) {
 			addSlotToContainer(new Slot(carpenter, i, x, 90));
-			x += 16;
+			x += 18;
 		}
 		
 		x = 10;
@@ -36,15 +36,15 @@ public class ContainerExtraCarpenter extends EFContainerBase {
 		i = SLOT_CRAFT_BEGIN;
 		while (i < SLOT_CRAFT_BEGIN + SLOT_CRAFT_COUNT) {
 			addSlotToContainer(new Slot(carpenter, i, x, y));
-			x += 16;
+			x += 18;
 			i++;
 			addSlotToContainer(new Slot(carpenter, i, x, y));
-			x += 16;
+			x += 18;
 			i++;
 			addSlotToContainer(new Slot(carpenter, i, x, y));
 			i++;
-			x += 16;
-			y += 16;
+			x = 10;
+			y += 18;
 		}
 		
 		addSlotToContainer(new Slot(carpenter, SLOT_PRE, 80, 51));
