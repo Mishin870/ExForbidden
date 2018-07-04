@@ -7,6 +7,10 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.IFluidTank;
 
+/**
+ * Простейший хранитель жидкости, основа для всех блоков,
+ * хранящих жидкости в моде
+ */
 public class SimpleFluidTank implements IFluidTank {
 	private int capacity, slot;
 	private FluidStack fluid;
@@ -78,7 +82,7 @@ public class SimpleFluidTank implements IFluidTank {
 	@Override
 	public FluidStack drain(int maxDrain, boolean doDrain) {
 		//Должен ли я возвращать null здесь?
-		//Комментарий гласит: @return Amount of fluid that was removed from the tank. 
+		//Комментарий IFluidTank.drain() гласит: @return Amount of fluid that was removed from the tank.
 		if (fluid == null) return null;
 		if (fluid.amount >= maxDrain) {
 			FluidStack ret = fluid.copy();

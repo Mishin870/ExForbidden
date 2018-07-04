@@ -16,6 +16,10 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
 
+/**
+ * Внутренние настройки ExForbidden, интегрированные с ресурсами мода (текстуры)
+ * @see <a href="/resources/assets/exforbidden/configs/">/resources/assets/exforbidden/configs/</a>
+ */
 public class EFTextures {
 	private static final ResourceLocation texturesProp = new ResourceLocation(Main.MODID + ":configs/textures.properties");
 	private static Properties textureNames = new Properties();

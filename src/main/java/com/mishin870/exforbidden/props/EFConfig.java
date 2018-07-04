@@ -4,6 +4,10 @@ import java.io.File;
 
 import net.minecraftforge.common.config.Configuration;
 
+/**
+ * Настройки мода, загружающиеся из конфигов
+ * Пока что ничего не хранят..
+ */
 public class EFConfig extends Configuration {
 	//private static final String CDEF = "default";
 	private static String dir;

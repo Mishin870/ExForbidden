@@ -14,6 +14,9 @@ import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 
+/**
+ * Основа логики пасеки
+ */
 public class TileEntityAlvearyBlock extends TileEntity implements BeeModifier {
 	public IMultiblockLogicAlveary multiBlockLogic;
 	

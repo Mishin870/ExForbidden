@@ -15,6 +15,9 @@ import forestry.api.core.IErrorState;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
+/**
+ * База данных возможных "ошибок".
+ */
 public class EFForestryErrors {
 	public static EFForestryError NO_VIS, NO_STABILIZER;
 	private static Map<Short, IErrorState> states;
@@ -44,6 +47,9 @@ public class EFForestryErrors {
 		for (IErrorState err : customStates) err.registerIcons(register);
 	}
 	
+	/**
+	 * "Ошибка". Также хранит в себе картинку, отображаемую в интерфейсе.
+	 */
 	static class EFForestryError implements IErrorState {
 		private static short CURRENT_ID = 5482;
 		private String key;

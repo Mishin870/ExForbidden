@@ -8,6 +8,10 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 
+/**
+ * Пример виджета, отображающего значения вис-энергии
+ * из сущности, реализующей {@link ICVisContainer}
+ */
 public class VisWidget extends Widget {
 	private static final int AQUA = 0x3cd4fc;
 	private static final int IGNIS = 0xff5a01;

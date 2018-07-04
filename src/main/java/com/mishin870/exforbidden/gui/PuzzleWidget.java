@@ -20,6 +20,9 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 
+/**
+ * Простейший игровой виджет в интерфейсах блоков ExForbidden
+ */
 public class PuzzleWidget extends Widget {
 	private static final int RESET_DELAY = 5000;
 	private static final int SIZE = 64;

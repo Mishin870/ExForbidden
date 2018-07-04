@@ -14,6 +14,9 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import net.minecraftforge.common.MinecraftForge;
 
+/**
+ * Общая часть логики. База для клиентской и серверной.
+ */
 public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent e) {
@@ -31,25 +34,11 @@ public class CommonProxy {
 	
 	public void init(FMLInitializationEvent e) {
 		EFRecipes.init();
-		//Р­С‚Рѕ РїРµСЂРµР¶РёС‚РєРё РїСЂРѕС€Р»РѕРіРѕ. ExForbidden СЏ РїРѕСЃС‚СЂРѕРёР» РЅР° РѕСЃРЅРѕРІРµ СЃРІРѕРµРіРѕ СЃС‚Р°СЂРѕРіРѕ РјРѕРґР°
-		//РЅРµ СѓРґР°Р»СЏСЋ, С‡С‚РѕР±С‹ РЅРµ Р·Р°Р±С‹С‚СЊ РЅРµРєРѕС‚РѕСЂС‹Рµ РІРµС‰Рё
-		/*Main.emManaRegen = new PotionEMManaRegen(Main.cfg.POTION_MANAREGEN);
-		Main.emLevitation = new PotionEMLevitation(Main.cfg.POTION_LEVITATION);
-		Main.emEleonPortal = new PotionEMEleonPortal(Main.cfg.POTION_ELEON);
-		EMCrafting.init();
-		EMAchievements.init();
-		Knowledges.init();
-		AltarRecipes.init();
-		ManaAltarRecipes.init();
-		if (!DimensionManager.registerProviderType(Main.cfg.DIMS_ELEON, WorldProviderEleon.class, false)) {
-			System.err.println("WARNING! Can't register eleon dimension. Change id in mod config");
-		}
-		DimensionManager.registerDimension(Main.cfg.DIMS_ELEON, Main.cfg.DIMS_ELEON);*/
 		NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new EFGuiHandler());
 	}
 	
 	public void postInit(FMLPostInitializationEvent e) {
-		//FMLCommonHandler.instance().bus().register(new EMEventListener());
+//		FMLCommonHandler.instance().bus().register(new EMEventListener());
 	}
 	
 }

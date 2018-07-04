@@ -13,6 +13,10 @@ import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
 
+/**
+ * База всех виджетов.
+ * Реализует отрисовку и функционал открытия-закрытия виджета
+ */
 public abstract class Widget {
 	private static final ResourceLocation widgetLeftTexture = new ResourceLocation(Main.MODID + ":textures/gui/widget_left.png");;
 	private static final ResourceLocation widgetRightTexture = new ResourceLocation(Main.MODID + ":textures/gui/widget_right.png");;

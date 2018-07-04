@@ -18,6 +18,11 @@ import io.netty.buffer.ByteBufInputStream;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.NetHandlerPlayServer;
 
+/**
+ * Слушатель сетевых пакетов.
+ * Определяет тип пакетов, создаёт связанные с типами объекты и вызывает process()
+ * @see PacketType
+ */
 public class NetworkPacketHandler {
 	public static final String CHANNEL_NAME = Main.CHANNELNAME;
 	private FMLEventChannel channel;
@@ -26,6 +31,9 @@ public class NetworkPacketHandler {
 		return Main.netHandler;
 	}
 	
+	/**
+	 *
+	 */
 	public static enum PacketType {
 		UNKNOWN, TRANSDIMENSIONAL_APIARY_CHARGE_UPDATE, CONTAINER_UPDATE_ERRORS, FLUID_TANK_UPDATE;
 	}

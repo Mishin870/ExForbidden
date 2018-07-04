@@ -17,6 +17,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.StatCollector;
 
+/**
+ * Основа рамок для пасеки.
+ * Краткая справка: рамки используются в пасеках для модификации
+ * свойств пчёл в них. Также рамки могут иметь собственную логику
+ * с какими-либо побочными эффектами при потере единицы прочности (1 тик работы)
+ */
 public class EFFrame extends Item implements IHiveFrame {
 	private EFFrameType type;
 

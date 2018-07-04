@@ -16,6 +16,10 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 
+/**
+ * Базовый визуальный контейнер для всех блоков ExForbidden.
+ * Хранит в себе и управляет визуальными виджетами.
+ */
 public abstract class EFGuiBase extends GuiContainer {
 	protected WidgetManager widgetManager = new WidgetManager(this);
 	

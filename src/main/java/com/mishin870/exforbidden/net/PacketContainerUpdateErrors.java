@@ -11,6 +11,10 @@ import forestry.api.core.IErrorLogicSource;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.tileentity.TileEntity;
 
+/**
+ * Пакет обновления визуального списка ошибок в контейнере
+ * (например, "пчёлам недостаточно света" или "недостаточно энергии" и т.д.)
+ */
 public class PacketContainerUpdateErrors extends EFPacketBase {
 	private IErrorLogicSource errorSource;
 	private int x, y, z;

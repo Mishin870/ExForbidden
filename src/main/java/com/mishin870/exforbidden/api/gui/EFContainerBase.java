@@ -16,6 +16,11 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.tileentity.TileEntity;
 
+/**
+ * Базовый контейнер интерфейса блоков ExForbidden.
+ * Слушает изменения списка "ошибок" контейнера и отправляет пакеты
+ * клиенту для отображения визуальных виджетов ошибок
+ */
 public class EFContainerBase extends Container {
 	protected final int PLAYER_INVENTORY_ROWS = 3;
 	protected final int PLAYER_INVENTORY_COLUMNS = 9;

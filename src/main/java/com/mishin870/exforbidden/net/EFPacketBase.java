@@ -17,6 +17,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompressedStreamTools;
 import net.minecraft.nbt.NBTTagCompound;
 
+/**
+ * Основа всех сетевых пакетов ExForbidden.
+ * Предоставляет удобные функции кодирования и декодирования NBT и предметов.
+ */
 public class EFPacketBase {
 	private NetworkPacketHandler.PacketType eventType;
 	
@@ -28,6 +32,11 @@ public class EFPacketBase {
 		this.eventType = type;
 	}
 	
+	/**
+	 * Получить готовый сетевой пакет Forge на основе данных,
+	 * записанных этим пакетом
+	 * @return сетевой пакет
+	 */
 	public FMLProxyPacket getPacket() {
 		ByteArrayOutputStream bytes = new ByteArrayOutputStream();
 		DataOutputStream data = new DataOutputStream(bytes);
@@ -41,10 +50,22 @@ public class EFPacketBase {
 		return new FMLProxyPacket(Unpooled.wrappedBuffer(bytes.toByteArray()), NetworkPacketHandler.CHANNEL_NAME);
 	}
 	
+	/**
+	 * Слушатель обработки пакета (переопределяется)
+	 * @param player игрок, с которым связан пакет
+	 */
 	public void process(EntityPlayerMP player) {}
 	
+	/**
+	 * Слушатель отправки данных в канал (переопределяется)
+	 * @param data канал
+	 */
 	protected void writeDataToOutputStream(DataOutputStream data) {}
 	
+	/**
+	 * Слушатель приёма данных с канала (переопределяется)
+	 * @param data канал
+	 */
 	protected void readDataFromInputStream(DataInputStream data) {}
 	
 	protected ItemStack readItemStackFromData(DataInputStream data) throws IOException {

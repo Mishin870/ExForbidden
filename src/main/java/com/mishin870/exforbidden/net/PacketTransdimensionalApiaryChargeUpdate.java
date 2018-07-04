@@ -10,6 +10,9 @@ import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.tileentity.TileEntity;
 
+/**
+ * Пакет обновления вис-заряда межпространственной пасеки
+ */
 public class PacketTransdimensionalApiaryChargeUpdate extends EFPacketBase {
 	private int[] charges;
 	private int x, y, z;

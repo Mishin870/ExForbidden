@@ -15,6 +15,10 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
 
+/**
+ * Клиентская часть логики
+ * Отрисовка, управление и т.д.
+ */
 public class ClientProxy extends CommonProxy {
 	
 	@Override

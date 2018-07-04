@@ -14,6 +14,10 @@ import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
+/**
+ * Клиент-серверный слушатель открытия интерфейса блоков
+ * Возвращает соответствующие клиентские и серверные контейнеры
+ */
 public class EFGuiHandler implements IGuiHandler {
 	public static final int TRANSDIMENSIONAL_APIARY = 0;
 	public static final int FRAME_ANALYZER = 1;

@@ -9,6 +9,9 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 
+/**
+ * Пример виджета, отображающего статичный текст
+ */
 public class SimpleWidget extends Widget {
 	private IIcon icon;
 	
@@ -30,23 +33,7 @@ public class SimpleWidget extends Widget {
 		this(gui, key, true, icon);
 	}
 	
-	/*private static IIcon getIcon(String key) {
-		if (StatCollector.canTranslate(key + ".img")) {
-			IIcon ret = EFTextures.getImage(StatCollector.translateToLocal(key + ".img"));
-			if (ret == null) {
-				//после вынесения в апи
-				//EFLogger.warn("Warning! null IIcon in widget at: " + key + ".img. Setting to DEFAULT");
-				System.out.println("Warning! null IIcon in widget at: " + key + ".img. Setting to DEFAULT");
-				return EFTextures.getImage(key);
-			} else {
-				return ret;
-			}
-		} else {
-			return EFTextures.getImage(key);
-		}
-	}*/
-	
-	private static WidgetColors getColorScheme(String key) {
+		private static WidgetColors getColorScheme(String key) {
 		if (StatCollector.canTranslate(key)) {
 			WidgetColors ret = WidgetColors.valueOf(StatCollector.translateToLocal(key));
 			if (ret == null) {

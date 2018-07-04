@@ -8,6 +8,9 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
+/**
+ * Специализация слота контейнера, принимающая только определённые предметы
+ */
 public class SlotCustomItems extends Slot {
 	private List<ItemStack> items;
 

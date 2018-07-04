@@ -3,6 +3,11 @@ package com.mishin870.exforbidden.forestrycomp;
 import forestry.api.apiculture.IBeeGenome;
 import forestry.api.apiculture.IBeeModifier;
 
+/**
+ * База реализованных рамок
+ *
+ * @see EFFrameType
+ */
 public enum EFFrameType implements IBeeModifier {
 	TEST("test", 10, 1.0F, 1.0F, 1.0F, 1.0F, 1.0F, 1.0F, false, false, false, false);
 	

@@ -5,6 +5,9 @@ import forestry.api.genetics.AlleleManager;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.util.StatCollector;
 
+/**
+ * Виджет контроля климата пасеки
+ */
 public class ClimateWidget extends Widget {
 	private final IClimateProvider tile;
 	

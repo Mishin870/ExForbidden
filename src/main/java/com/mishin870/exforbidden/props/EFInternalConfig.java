@@ -13,6 +13,10 @@ import com.mishin870.exforbidden.utils.EFLogger;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
 
+/**
+ * Внутренние настройки ExForbidden, интегрированные с ресурсами мода
+ * @see <a href="/resources/assets/exforbidden/configs/">/resources/assets/exforbidden/configs/</a>
+ */
 public class EFInternalConfig {
 	private static final ResourceLocation internalProp = new ResourceLocation(Main.MODID + ":configs/internal.properties");
 	public static Map<String, String> props = new HashMap<String, String>();
@@ -34,6 +38,11 @@ public class EFInternalConfig {
 		}
 	}
 	
+	/**
+	 * Получить значение конфига
+	 * @param key ключ
+	 * @return значение
+	 */
 	public static String getVal(String key) {
 		return props.get(key);
 	}

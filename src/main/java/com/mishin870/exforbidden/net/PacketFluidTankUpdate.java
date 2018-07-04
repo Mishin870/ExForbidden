@@ -14,6 +14,10 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 
+/**
+ * Пакет обновления жидкостного слота в контейнере
+ * Например, слот с лавой
+ */
 public class PacketFluidTankUpdate extends EFPacketBase {
 	private IEFFluidInventory inventory;
 	private int x, y, z, slot;

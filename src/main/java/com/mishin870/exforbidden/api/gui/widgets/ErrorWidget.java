@@ -7,6 +7,10 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 
+/**
+ * Виджет отображения "ошибок"
+ * Например, "недостаточно энергии для работы пасеки"
+ */
 public class ErrorWidget extends Widget {
 	private IErrorState state;
 	

@@ -11,6 +11,10 @@ import com.google.common.collect.ImmutableSet;
 import forestry.api.core.IErrorLogic;
 import forestry.api.core.IErrorState;
 
+/**
+ * База всех источников "ошибок" ExForbidden.
+ * Позволяет извне устанавливать состояния каждого сообщения об ошибке
+ */
 public class EFErrorLogic implements IErrorLogic {
 	private final Set<IErrorState> errorStates = new HashSet();
 	
