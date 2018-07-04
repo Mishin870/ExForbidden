@@ -8,6 +8,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
+/**
+ * База для всех блоков, хранящих эссенции Thaumcraft
+ * по механизму ExForbidden
+ */
 public class EssentiaContainer extends Block implements ITileEntityProvider {
 	
 	public EssentiaContainer(String unlocName) {

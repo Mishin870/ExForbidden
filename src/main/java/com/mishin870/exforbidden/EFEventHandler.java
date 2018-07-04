@@ -8,13 +8,16 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraftforge.client.event.TextureStitchEvent;
 
+/**
+ * РЎР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ ExForbidden
+ */
 public class EFEventHandler {
 	
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public void handleTextureRemap(TextureStitchEvent.Pre event) {
-		//регистрируем отдельные картинки в общем процессе создания текстурного атласа игрой
-		//это способ создать картинки БЕЗ создания предмета
+		//СЂРµРіРёСЃС‚СЂРёСЂСѓРµРј РѕС‚РґРµР»СЊРЅС‹Рµ РєР°СЂС‚РёРЅРєРё РІ РѕР±С‰РµРј РїСЂРѕС†РµСЃСЃРµ СЃРѕР·РґР°РЅРёСЏ С‚РµРєСЃС‚СѓСЂРЅРѕРіРѕ Р°С‚Р»Р°СЃР° РёРіСЂРѕР№
+		//СЌС‚Рѕ СЃРїРѕСЃРѕР± СЃРѕР·РґР°С‚СЊ РєР°СЂС‚РёРЅРєРё Р‘Р•Р— СЃРѕР·РґР°РЅРёСЏ РїСЂРµРґРјРµС‚Р°
 		//0 = blocks, 1 = items
 		if (event.map.getTextureType() == 1) {
 			EFTextures.init(event.map);

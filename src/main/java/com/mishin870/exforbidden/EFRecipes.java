@@ -6,6 +6,9 @@ import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 
+/**
+ * Рецепты крафта ExForbidden
+ */
 public class EFRecipes {
 	
 	public static void init() {

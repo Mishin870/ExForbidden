@@ -13,6 +13,9 @@ import com.mishin870.exforbidden.thaumcraftcomp.TileEntityEssentiaContainer;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
+/**
+ * Р‘Р»РѕРєРё ExForbidden
+ */
 public class EFBlocks {
 	private static final String ALVEARY_LIGHTER = "alveary_lighter";
 	private static final String ESSENTIA_CONTAIENR = "essentia_container";
@@ -26,7 +29,7 @@ public class EFBlocks {
 	public static ExtraCarpenter extraCarpenter;
 	
 	/**
-	 * Инициализация всех блоков
+	 * РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РІСЃРµС… Р±Р»РѕРєРѕРІ
 	 */
 	public static final void init() {
 		alvearyLighter = new AlvearyLighter(ALVEARY_LIGHTER);

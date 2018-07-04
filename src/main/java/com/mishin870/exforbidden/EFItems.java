@@ -7,12 +7,15 @@ import com.mishin870.exforbidden.forestrycomp.biome_stabilizer.BiomeStabilizerTy
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
+/**
+ * РџСЂРµРґРјРµС‚С‹ ExForbidden
+ */
 public final class EFItems {
 	public static EFFrame frameTest;
 	public static BiomeStabilizer biomeStabilizer;
 	
 	/**
-	 * Инициализация всех предметов
+	 * РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РІСЃРµС… РїСЂРµРґРјРµС‚РѕРІ
 	 */
 	public static final void init() {
 		frameTest = new EFFrame(EFFrameType.TEST);

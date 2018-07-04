@@ -5,6 +5,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
+/**
+ * Вкладка ExForbidden в меню креатива
+ */
 public class EFCreativeTab extends CreativeTabs {
 	
 	public EFCreativeTab() {

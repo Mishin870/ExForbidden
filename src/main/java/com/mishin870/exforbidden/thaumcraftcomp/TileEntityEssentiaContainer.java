@@ -8,6 +8,9 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.aspects.IAspectSource;
 
+/**
+ * Логика хранителя эссенции
+ */
 public class TileEntityEssentiaContainer extends TileEntity implements IAspectSource {
 	private AspectList list;
 	
@@ -21,20 +24,26 @@ public class TileEntityEssentiaContainer extends TileEntity implements IAspectSo
 		list.add(Aspect.ENTROPY, 1000);
 	}
 	
+	/**
+	 * Добавить определённое количество аспекта в хранитель
+	 * @param aspect тип аспекта
+	 * @param n количество
+	 * @return добавленное количество
+	 */
 	@Override
-	public int addToContainer(Aspect a, int n) {
-		list.add(a, n);
+	public int addToContainer(Aspect aspect, int n) {
+		list.add(aspect, n);
 		return n;
 	}
-
+	
 	@Override
-	public int containerContains(Aspect a) {
-		return list.getAmount(a);
+	public int containerContains(Aspect aspect) {
+		return list.getAmount(aspect);
 	}
-
+	
 	@Override
-	public boolean doesContainerAccept(Aspect a) {
-		return a.isPrimal();
+	public boolean doesContainerAccept(Aspect aspect) {
+		return aspect.isPrimal();
 	}
 
 	@Override
@@ -46,22 +55,41 @@ public class TileEntityEssentiaContainer extends TileEntity implements IAspectSo
 		}
 		return true;
 	}
-
+	
+	/**
+	 * Содержит ли хранитель достаточное количество указанного аспекта
+	 * @param aspect тип аспекта
+	 * @param n количество
+	 */
 	@Override
-	public boolean doesContainerContainAmount(Aspect a, int n) {
-		return list.getAmount(a) >= n;
+	public boolean doesContainerContainAmount(Aspect aspect, int n) {
+		return list.getAmount(aspect) >= n;
 	}
-
+	
+	/**
+	 * Возвращает все аспекты, содержащиеся в хранителе
+	 * и их количества
+	 */
 	@Override
 	public AspectList getAspects() {
 		return list;
 	}
-
+	
+	/**
+	 * Принудительно устанавливает хранителю аспекты
+	 */
 	@Override
 	public void setAspects(AspectList list) {
 		this.list = list;
 	}
-
+	
+	/**
+	 * Попытаться забрать определённое количество аспектов
+	 * из хранителя.
+	 *
+	 * @param list список аспектов и их количества
+	 * @return true, если хранитель содержит и было изъято нужное количество
+	 */
 	@Override
 	public boolean takeFromContainer(AspectList list) {
 		Iterator<Entry<Aspect, Integer>> iter = list.aspects.entrySet().iterator();
@@ -72,11 +100,19 @@ public class TileEntityEssentiaContainer extends TileEntity implements IAspectSo
 		}
 		return true;
 	}
-
+	
+	/**
+	 * Попытаться забрать определённое количество одного аспекта
+	 * из хранителя
+	 *
+	 * @param aspect аспект
+	 * @param n количество
+	 * @return true, если хранитель содержит и было изъято нужное количество
+	 */
 	@Override
-	public boolean takeFromContainer(Aspect a, int n) {
-		if (list.getAmount(a) >= n) {
-			list.reduce(a, n);
+	public boolean takeFromContainer(Aspect aspect, int n) {
+		if (list.getAmount(aspect) >= n) {
+			list.reduce(aspect, n);
 			return true;
 		} else {
 			return false;

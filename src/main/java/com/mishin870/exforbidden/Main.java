@@ -73,17 +73,17 @@ public class Main {
 	}
 	
 	/**
-	 * ��������� ��������� ������������� ������
-	 * @param p �����
-	 * @param msg ���������
+	 * СњС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ РѕРїСЂРµРґРµР»РµРЅРЅРѕРјСѓ РёРіСЂРѕРєСѓ
+	 * @param p РёРіСЂРѕРє
+	 * @param msg СЃРѕРѕР±С‰РµРЅРёРµ
 	 */
 	public static final void chatMsg(EntityPlayer p, String msg) {
 		p.addChatComponentMessage(new ChatComponentText(msg));
 	}
 	
 	/**
-	 * ��������� ��������� ���������� ������
-	 * @param msg ���������
+	 * СњС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ Р»РѕРєР°Р»СЊРЅРѕРјСѓ РёРіСЂРѕРєСѓ
+	 * @param msg СЃРѕРѕР±С‰РµРЅРёРµ
 	 */
 	@SideOnly(Side.CLIENT)
 	public static final void sendToMe(String msg) {

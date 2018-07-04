@@ -35,7 +35,7 @@ public class TileEntityExtraCarpenter extends TileEntity implements IInventory, 
 		return packet.getPacket();
 	}
 	
-	//Заглушка, т.к. танк в плотнике один и можно реализовать такой функцией
+	//Р—Р°РіР»СѓС€РєР°, С‚.Рє. С‚Р°РЅРє РІ РїР»РѕС‚РЅРёРєРµ РѕРґРёРЅ Рё РјРѕР¶РЅРѕ СЂРµР°Р»РёР·РѕРІР°С‚СЊ С‚Р°РєРѕР№ С„СѓРЅРєС†РёРµР№
 	public FluidStack getFluidInTank() {
 		return tank.getFluid();
 	}

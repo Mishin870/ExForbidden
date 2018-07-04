@@ -46,7 +46,7 @@ public class GuiTransdimensionalApiary extends EFGuiBase {
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 		super.drawGuiContainerForegroundLayer(mouseX, mouseY);
-		//Это на случай, если мне понадобится выводить название блока (не понадобится)
+		//Р­С‚Рѕ РЅР° СЃР»СѓС‡Р°Р№, РµСЃР»Рё РјРЅРµ РїРѕРЅР°РґРѕР±РёС‚СЃСЏ РІС‹РІРѕРґРёС‚СЊ РЅР°Р·РІР°РЅРёРµ Р±Р»РѕРєР° (РЅРµ РїРѕРЅР°РґРѕР±РёС‚СЃСЏ)
 		/*String s = this.te.getDisplayName().getUnformattedText();
 	    this.fontRendererObj.drawString(s, 88 - this.fontRendererObj.getStringWidth(s) / 2, 6, 4210752);            //#404040
 	    this.fontRendererObj.drawString(this.playerInv.getDisplayName().getUnformattedText(), 8, 72, 4210752);      //#404040*/

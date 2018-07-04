@@ -6,6 +6,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+/**
+ * Утилита для получения предметов из других модов
+ */
 public class ItemInterface {
 	
 	public static ItemStack getItemStack(String modId, String item) {

@@ -58,7 +58,7 @@ public abstract class Widget {
 	}
 	
 	public void update(long frames) {
-		//Ширина
+		//РЁРёСЂРёРЅР°
 		if (open && currentWidth < maxWidth) {
 			currentWidth += 4 * frames;
 			if (currentWidth > maxWidth) currentWidth = maxWidth;
@@ -66,7 +66,7 @@ public abstract class Widget {
 			currentWidth -= 4 * frames;
 			if (currentWidth < minWidth) currentWidth = minWidth;
 		}
-		//Высота
+		//Р’С‹СЃРѕС‚Р°
 		if (open && currentHeight < maxHeight) {
 			currentHeight += 4 * frames;
 			if (currentHeight > maxHeight) currentHeight = maxHeight;

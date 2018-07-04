@@ -4,8 +4,8 @@ import net.minecraftforge.fluids.FluidStack;
 
 public interface IEFFluidChangeCallback {
 	/**
-	 * Вызывается танком когда его состояние меняется (для отправки клиенту)
-	 * @param slot слот
+	 * Р’С‹Р·С‹РІР°РµС‚СЃСЏ С‚Р°РЅРєРѕРј РєРѕРіРґР° РµРіРѕ СЃРѕСЃС‚РѕСЏРЅРёРµ РјРµРЅСЏРµС‚СЃСЏ (РґР»СЏ РѕС‚РїСЂР°РІРєРё РєР»РёРµРЅС‚Сѓ)
+	 * @param slot СЃР»РѕС‚
 	 */
 	public void fluidSlotChanged(int slot);
 }

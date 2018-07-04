@@ -5,12 +5,15 @@ import org.apache.logging.log4j.Level;
 
 import com.mishin870.exforbidden.Main;
 
+/**
+ * Оболочка над стандартным логгером Forge
+ */
 public class EFLogger {
 	
 	/**
-	 * ������� ������� �������
-	 * @param logLevel
-	 * @param object ����� ��������� (��� String.valueOf(...))
+	 * Базовая функция логгера
+	 * @param logLevel уровень логгирования
+	 * @param object любое сообщение (для String.valueOf(...))
 	 */
 	public static void log(Level logLevel, Object object) {
 		FMLLog.log(Main.MODNAME, logLevel, String.valueOf(object), new Object[0]);

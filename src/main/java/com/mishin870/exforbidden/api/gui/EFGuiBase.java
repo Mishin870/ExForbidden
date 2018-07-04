@@ -192,7 +192,7 @@ public abstract class EFGuiBase extends GuiContainer {
 		public void handleMouseClicked(int x, int y, int mouseButton) {
 			if (mouseButton == 0) {
 				Widget widget = this.getAtPosition(x, y);
-				//Скрытие-открытие только если Widget не обрабатывает нажатие (кнопка внутри Widget)
+				//РЎРєСЂС‹С‚РёРµ-РѕС‚РєСЂС‹С‚РёРµ С‚РѕР»СЊРєРѕ РµСЃР»Рё Widget РЅРµ РѕР±СЂР°Р±Р°С‚С‹РІР°РµС‚ РЅР°Р¶Р°С‚РёРµ (РєРЅРѕРїРєР° РІРЅСѓС‚СЂРё Widget)
 				if (widget != null && !widget.handleMouseClicked(x, y, mouseButton)) {
 					for (Widget other : widgets) if (other != widget && other.isOpen()) other.toggleOpen();
 					for (ErrorWidget other : errorWidgets) if (other != widget && other.isOpen()) other.toggleOpen();

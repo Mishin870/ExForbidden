@@ -24,7 +24,7 @@ public class EFConfig extends Configuration {
 	
 	/*private static void biomes() {
 		BIOMES_MANA = config.get(CBIOMES, "mana", 25).getInt();
-		DEFAULT = config.get(CDEF, "default", 1).getInt(); //1 - значение по умолчанию
+		DEFAULT = config.get(CDEF, "default", 1).getInt(); //1 - Р·РЅР°С‡РµРЅРёРµ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	}*/
 	
 	public static Configuration getConfig() {

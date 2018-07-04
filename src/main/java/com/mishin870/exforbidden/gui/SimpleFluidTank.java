@@ -77,8 +77,8 @@ public class SimpleFluidTank implements IFluidTank {
 	
 	@Override
 	public FluidStack drain(int maxDrain, boolean doDrain) {
-		//Äîëæåí ëè ÿ âîçâðàùàòü null çäåñü?
-		//Êîììåíòàðèé ãëàñèò: @return Amount of fluid that was removed from the tank. 
+		//Ð”Ð¾Ð»Ð¶ÐµÐ½ Ð»Ð¸ Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°Ñ‚ÑŒ null Ð·Ð´ÐµÑÑŒ?
+		//ÐšÐ¾Ð¼Ð¼ÐµÐ½Ñ‚Ð°Ñ€Ð¸Ð¹ Ð³Ð»Ð°ÑÐ¸Ñ‚: @return Amount of fluid that was removed from the tank. 
 		if (fluid == null) return null;
 		if (fluid.amount >= maxDrain) {
 			FluidStack ret = fluid.copy();

@@ -6,7 +6,7 @@ import net.minecraft.client.gui.FontRenderer;
 public class StringUtils {
 	
 	/**
-	 * Получить высоту заданного текста
+	 * РџРѕР»СѓС‡РёС‚СЊ РІС‹СЃРѕС‚Сѓ Р·Р°РґР°РЅРЅРѕРіРѕ С‚РµРєСЃС‚Р°
 	 */
 	public static int getTextHeigth(FontRenderer fontRenderer, int maxWidth, String... strings) {
 		int lineCount = 0;

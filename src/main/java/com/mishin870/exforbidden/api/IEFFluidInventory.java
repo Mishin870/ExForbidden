@@ -4,14 +4,14 @@ import net.minecraftforge.fluids.FluidStack;
 
 public interface IEFFluidInventory {
 	/**
-	 * Установить жидкость в слот
-	 * @param slot слот
-	 * @param fluid жидкость
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ Р¶РёРґРєРѕСЃС‚СЊ РІ СЃР»РѕС‚
+	 * @param slot СЃР»РѕС‚
+	 * @param fluid Р¶РёРґРєРѕСЃС‚СЊ
 	 */
 	public void setFluidSlotContents(int slot, FluidStack fluid);
 	/**
-	 * Получить жидкость из слота
-	 * @param slot слот
+	 * РџРѕР»СѓС‡РёС‚СЊ Р¶РёРґРєРѕСЃС‚СЊ РёР· СЃР»РѕС‚Р°
+	 * @param slot СЃР»РѕС‚
 	 * @return
 	 */
 	public FluidStack getFluidSlotContents(int slot);

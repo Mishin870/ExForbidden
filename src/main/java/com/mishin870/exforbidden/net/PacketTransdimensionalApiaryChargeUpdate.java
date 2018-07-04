@@ -33,7 +33,7 @@ public class PacketTransdimensionalApiaryChargeUpdate extends EFPacketBase {
 			byteStream.writeInt(x);
 			byteStream.writeInt(y);
 			byteStream.writeInt(z);
-			//т.к. значения зарядов не должны превышать 255 (и не будут)
+			//С‚.Рє. Р·РЅР°С‡РµРЅРёСЏ Р·Р°СЂСЏРґРѕРІ РЅРµ РґРѕР»Р¶РЅС‹ РїСЂРµРІС‹С€Р°С‚СЊ 255 (Рё РЅРµ Р±СѓРґСѓС‚)
 			for (int i = 0; i < charges.length; i++) byteStream.writeByte(charges[i]);
 		} catch (IOException e) {
 			e.printStackTrace();

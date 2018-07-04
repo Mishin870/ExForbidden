@@ -290,7 +290,7 @@ IBeeHousing, IErrorSource {
 	}
 	
 	public void updateServerSide() {
-		//потребление сантивис
+		//РїРѕС‚СЂРµР±Р»РµРЅРёРµ СЃР°РЅС‚РёРІРёСЃ
 		long tick = this.worldObj.getTotalWorldTime();
 		if (tick % TICK_RATE_DRAIN == 0) {
 			charges[0] += VisNetHandler.drainVis(this.worldObj, this.xCoord, this.yCoord, this.zCoord, Aspect.WATER, MAX_VIS - charges[0]);
@@ -325,7 +325,7 @@ IBeeHousing, IErrorSource {
 			PacketTransdimensionalApiaryChargeUpdate packet = new PacketTransdimensionalApiaryChargeUpdate(charges, this.xCoord, this.yCoord, this.zCoord);
 			NetUtils.sendNetworkPacket(packet, this.xCoord, this.zCoord, this.worldObj);
 		}
-		//работа
+		//СЂР°Р±РѕС‚Р°
 		if (this.beeLogic.canWork() && hasStabilizer && hasVis) {
 			this.beeLogic.doWork();
 		}

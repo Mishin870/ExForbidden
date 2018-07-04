@@ -6,12 +6,12 @@ import net.minecraft.item.ItemStack;
 public class ItemUtils {
 	
 	/**
-	 * Добавить массив из предметов в инвентарь
-	 * @param inventory целевой инвентарь
-	 * @param items предмет
-	 * @param startSlot слот начала
-	 * @param slotCount количество слотов
-	 * @return количество добавленных предметов
+	 * Р”РѕР±Р°РІРёС‚СЊ РјР°СЃСЃРёРІ РёР· РїСЂРµРґРјРµС‚РѕРІ РІ РёРЅРІРµРЅС‚Р°СЂСЊ
+	 * @param inventory С†РµР»РµРІРѕР№ РёРЅРІРµРЅС‚Р°СЂСЊ
+	 * @param items РїСЂРµРґРјРµС‚
+	 * @param startSlot СЃР»РѕС‚ РЅР°С‡Р°Р»Р°
+	 * @param slotCount РєРѕР»РёС‡РµСЃС‚РІРѕ СЃР»РѕС‚РѕРІ
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РґРѕР±Р°РІР»РµРЅРЅС‹С… РїСЂРµРґРјРµС‚РѕРІ
 	 */
 	public static int tryAddItemStacksToInvenotry(IInventory inventory, ItemStack[] items, int startSlot, int slotCount) {
 		int itemsAdded = 0;
@@ -22,12 +22,12 @@ public class ItemUtils {
 	}
 	
 	/**
-	 * Добавить массив из предметов в инвентарь
-	 * @param inventory целевой инвентарь
-	 * @param items предмет
-	 * @param startSlot слот начала
-	 * @param slotCount количество слотов
-	 * @return true или false в случае удачи или неудачи
+	 * Р”РѕР±Р°РІРёС‚СЊ РјР°СЃСЃРёРІ РёР· РїСЂРµРґРјРµС‚РѕРІ РІ РёРЅРІРµРЅС‚Р°СЂСЊ
+	 * @param inventory С†РµР»РµРІРѕР№ РёРЅРІРµРЅС‚Р°СЂСЊ
+	 * @param items РїСЂРµРґРјРµС‚
+	 * @param startSlot СЃР»РѕС‚ РЅР°С‡Р°Р»Р°
+	 * @param slotCount РєРѕР»РёС‡РµСЃС‚РІРѕ СЃР»РѕС‚РѕРІ
+	 * @return true РёР»Рё false РІ СЃР»СѓС‡Р°Рµ СѓРґР°С‡Рё РёР»Рё РЅРµСѓРґР°С‡Рё
 	 */
 	public static boolean tryAddAllItemStacksToInventory(IInventory inventory, ItemStack[] items, int startSlot, int slotCount) {
 		int itemsToAdd = 0, itemsAdded = 0;
@@ -39,12 +39,12 @@ public class ItemUtils {
 	}
 	
 	/**
-	 * Добавить предмет в любые слоты
-	 * @param inventory целевой инвентарь
-	 * @param item предмет
-	 * @param startSlot слот начала
-	 * @param slotCount количество слотов
-	 * @return количество добавленного предмета
+	 * Р”РѕР±Р°РІРёС‚СЊ РїСЂРµРґРјРµС‚ РІ Р»СЋР±С‹Рµ СЃР»РѕС‚С‹
+	 * @param inventory С†РµР»РµРІРѕР№ РёРЅРІРµРЅС‚Р°СЂСЊ
+	 * @param item РїСЂРµРґРјРµС‚
+	 * @param startSlot СЃР»РѕС‚ РЅР°С‡Р°Р»Р°
+	 * @param slotCount РєРѕР»РёС‡РµСЃС‚РІРѕ СЃР»РѕС‚РѕРІ
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РґРѕР±Р°РІР»РµРЅРЅРѕРіРѕ РїСЂРµРґРјРµС‚Р°
 	 */
 	public static int addItemToInventory(IInventory inventory, ItemStack item, int startSlot, int slotCount) {
 		int itemsAdded = 0;
@@ -57,12 +57,12 @@ public class ItemUtils {
 	}
 	
 	/**
-	 * Добавить предмет в заполненные слоты
-	 * @param inventory целевой инвентарь
-	 * @param item предмет
-	 * @param startSlot слот начала
-	 * @param slotCount количество слотов
-	 * @return количество добавленного предмета
+	 * Р”РѕР±Р°РІРёС‚СЊ РїСЂРµРґРјРµС‚ РІ Р·Р°РїРѕР»РЅРµРЅРЅС‹Рµ СЃР»РѕС‚С‹
+	 * @param inventory С†РµР»РµРІРѕР№ РёРЅРІРµРЅС‚Р°СЂСЊ
+	 * @param item РїСЂРµРґРјРµС‚
+	 * @param startSlot СЃР»РѕС‚ РЅР°С‡Р°Р»Р°
+	 * @param slotCount РєРѕР»РёС‡РµСЃС‚РІРѕ СЃР»РѕС‚РѕРІ
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РґРѕР±Р°РІР»РµРЅРЅРѕРіРѕ РїСЂРµРґРјРµС‚Р°
 	 */
 	private static int addToExistingSlot(IInventory inventory, ItemStack item, int startSlot, int slotCount) {
 		int itemsAdded = 0;
@@ -90,12 +90,12 @@ public class ItemUtils {
 	}
 	
 	/**
-	 * Попытаться добавить весь стек предмета в пустой слот
-	 * @param inventory целевой инвентарь
-	 * @param item предмет
-	 * @param startSlot слот начала
-	 * @param slotCount количество слотов
-	 * @return 0 в случае неудачи и размер входного стека при удаче
+	 * РџРѕРїС‹С‚Р°С‚СЊСЃСЏ РґРѕР±Р°РІРёС‚СЊ РІРµСЃСЊ СЃС‚РµРє РїСЂРµРґРјРµС‚Р° РІ РїСѓСЃС‚РѕР№ СЃР»РѕС‚
+	 * @param inventory С†РµР»РµРІРѕР№ РёРЅРІРµРЅС‚Р°СЂСЊ
+	 * @param item РїСЂРµРґРјРµС‚
+	 * @param startSlot СЃР»РѕС‚ РЅР°С‡Р°Р»Р°
+	 * @param slotCount РєРѕР»РёС‡РµСЃС‚РІРѕ СЃР»РѕС‚РѕРІ
+	 * @return 0 РІ СЃР»СѓС‡Р°Рµ РЅРµСѓРґР°С‡Рё Рё СЂР°Р·РјРµСЂ РІС…РѕРґРЅРѕРіРѕ СЃС‚РµРєР° РїСЂРё СѓРґР°С‡Рµ
 	 */
 	private static int addToEmptySlot(IInventory inventory, ItemStack item, int startSlot, int slotCount) {
 		for (int slotIndex = startSlot; slotIndex < startSlot + slotCount; slotIndex++) {
@@ -109,7 +109,7 @@ public class ItemUtils {
 	}
 	
 	/**
-	 * Полная проверка совпадения двух стеков
+	 * РџРѕР»РЅР°СЏ РїСЂРѕРІРµСЂРєР° СЃРѕРІРїР°РґРµРЅРёСЏ РґРІСѓС… СЃС‚РµРєРѕРІ
 	 */
 	public static boolean areItemsEqualNBT(ItemStack item, ItemStack otherItem) {
 		return (item.isItemEqual(otherItem)) && (ItemStack.areItemStackTagsEqual(item, otherItem));

@@ -62,7 +62,7 @@ public class PuzzleWidget extends Widget {
 	
 	private void checkWin() {
 		for (byte i = 0; i < 16; i++) {
-			//åñëè õîòü 1 ÿ÷åéêà íå ñîâïàäàåò, òî âûõîäèì
+			//ÐµÑÐ»Ð¸ Ñ…Ð¾Ñ‚ÑŒ 1 ÑÑ‡ÐµÐ¹ÐºÐ° Ð½Ðµ ÑÐ¾Ð²Ð¿Ð°Ð´Ð°ÐµÑ‚, Ñ‚Ð¾ Ð²Ñ‹Ñ…Ð¾Ð´Ð¸Ð¼
 			if (state[i] != i) return;
 		}
 		win = true;

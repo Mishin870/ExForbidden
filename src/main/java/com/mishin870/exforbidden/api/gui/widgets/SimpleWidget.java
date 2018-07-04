@@ -13,9 +13,9 @@ public class SimpleWidget extends Widget {
 	private IIcon icon;
 	
 	/**
-	 * Простая подсказка
-	 * @param gui ссылка на интерфейс 
-	 * @param key ключ в lang файле
+	 * РџСЂРѕСЃС‚Р°СЏ РїРѕРґСЃРєР°Р·РєР°
+	 * @param gui СЃСЃС‹Р»РєР° РЅР° РёРЅС‚РµСЂС„РµР№СЃ 
+	 * @param key РєР»СЋС‡ РІ lang С„Р°Р№Р»Рµ
 	 */
 	public SimpleWidget(GuiContainer gui, String key, boolean isRight, IIcon icon) {
 		super(gui, getColorScheme(key + ".type"), key, isRight);
@@ -34,7 +34,7 @@ public class SimpleWidget extends Widget {
 		if (StatCollector.canTranslate(key + ".img")) {
 			IIcon ret = EFTextures.getImage(StatCollector.translateToLocal(key + ".img"));
 			if (ret == null) {
-				//после вынесения в апи
+				//РїРѕСЃР»Рµ РІС‹РЅРµСЃРµРЅРёСЏ РІ Р°РїРё
 				//EFLogger.warn("Warning! null IIcon in widget at: " + key + ".img. Setting to DEFAULT");
 				System.out.println("Warning! null IIcon in widget at: " + key + ".img. Setting to DEFAULT");
 				return EFTextures.getImage(key);

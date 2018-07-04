@@ -31,8 +31,8 @@ public class CommonProxy {
 	
 	public void init(FMLInitializationEvent e) {
 		EFRecipes.init();
-		//Это пережитки прошлого. ExForbidden я построил на основе своего старого мода
-		//не удаляю, чтобы не забыть некоторые вещи
+		//Р­С‚Рѕ РїРµСЂРµР¶РёС‚РєРё РїСЂРѕС€Р»РѕРіРѕ. ExForbidden СЏ РїРѕСЃС‚СЂРѕРёР» РЅР° РѕСЃРЅРѕРІРµ СЃРІРѕРµРіРѕ СЃС‚Р°СЂРѕРіРѕ РјРѕРґР°
+		//РЅРµ СѓРґР°Р»СЏСЋ, С‡С‚РѕР±С‹ РЅРµ Р·Р°Р±С‹С‚СЊ РЅРµРєРѕС‚РѕСЂС‹Рµ РІРµС‰Рё
 		/*Main.emManaRegen = new PotionEMManaRegen(Main.cfg.POTION_MANAREGEN);
 		Main.emLevitation = new PotionEMLevitation(Main.cfg.POTION_LEVITATION);
 		Main.emEleonPortal = new PotionEMEleonPortal(Main.cfg.POTION_ELEON);

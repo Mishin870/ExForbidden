@@ -60,7 +60,7 @@ public class GuiExtraCarpenter extends EFGuiBase {
 	}
 	
 	/**
-	 * Рисует столб жидкости с заранее определенной шириной (16)
+	 * Р РёСЃСѓРµС‚ СЃС‚РѕР»Р± Р¶РёРґРєРѕСЃС‚Рё СЃ Р·Р°СЂР°РЅРµРµ РѕРїСЂРµРґРµР»РµРЅРЅРѕР№ С€РёСЂРёРЅРѕР№ (16)
 	 */
 	private void drawFluidPillar(int x, int y, IIcon icon, int height) {
 		for (int i = 0; i < height; i += 16) {
