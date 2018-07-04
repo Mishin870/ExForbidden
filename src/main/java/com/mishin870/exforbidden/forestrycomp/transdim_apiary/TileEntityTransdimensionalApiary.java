@@ -262,7 +262,8 @@ IBeeHousing, IErrorSource {
 	@Override
 	public Packet getDescriptionPacket() {
 		this.beeLogic.syncToClient();
-		return super.getDescriptionPacket();
+		PacketTransdimensionalApiaryChargeUpdate packet = new PacketTransdimensionalApiaryChargeUpdate(charges, xCoord, yCoord, zCoord);
+		return packet.getPacket();
 	}
 	
 	public float getExactTemperature() {

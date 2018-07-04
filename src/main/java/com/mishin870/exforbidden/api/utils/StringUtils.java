@@ -1,4 +1,4 @@
-package com.mishin870.exforbidden.utils;
+package com.mishin870.exforbidden.api.utils;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;

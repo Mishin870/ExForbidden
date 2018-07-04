@@ -6,12 +6,13 @@ import com.mishin870.exforbidden.EFRecipes;
 import com.mishin870.exforbidden.Main;
 import com.mishin870.exforbidden.forestrycomp.EFForestryErrors;
 import com.mishin870.exforbidden.gui.EFGuiHandler;
-import com.mishin870.exforbidden.props.EFInternalConfig;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import net.minecraftforge.common.MinecraftForge;
 
 public class CommonProxy {
 	
@@ -49,7 +50,6 @@ public class CommonProxy {
 	
 	public void postInit(FMLPostInitializationEvent e) {
 		//FMLCommonHandler.instance().bus().register(new EMEventListener());
-		//MinecraftForge.EVENT_BUS.register(new RenderGUIHandler());
 	}
 	
 }

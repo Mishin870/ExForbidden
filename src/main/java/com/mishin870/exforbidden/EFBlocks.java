@@ -2,6 +2,8 @@ package com.mishin870.exforbidden;
 
 import com.mishin870.exforbidden.forestrycomp.alveary_lighter.AlvearyLighter;
 import com.mishin870.exforbidden.forestrycomp.alveary_lighter.TileEntityAlvearyLighter;
+import com.mishin870.exforbidden.forestrycomp.extra_carpenter.ExtraCarpenter;
+import com.mishin870.exforbidden.forestrycomp.extra_carpenter.TileEntityExtraCarpenter;
 import com.mishin870.exforbidden.forestrycomp.frame_analyzer.FrameAnalyzer;
 import com.mishin870.exforbidden.forestrycomp.frame_analyzer.TileEntityFrameAnalyzer;
 import com.mishin870.exforbidden.forestrycomp.transdim_apiary.TileEntityTransdimensionalApiary;
@@ -16,10 +18,12 @@ public class EFBlocks {
 	private static final String ESSENTIA_CONTAIENR = "essentia_container";
 	private static final String TRANSDIMENSIONAL_APIARY = "transdimensional_apiary";
 	private static final String FRAME_ANALYZER = "frame_analyzer";
+	private static final String EXTRA_CARPENTER = "extra_carpenter";
 	public static AlvearyLighter alvearyLighter;
 	public static EssentiaContainer essentiaContainer;
 	public static TransdimensionalApiary transdimensionalApiary;
 	public static FrameAnalyzer frameAnalyzer;
+	public static ExtraCarpenter extraCarpenter;
 	
 	/**
 	 * Инициализация всех блоков
@@ -40,6 +44,10 @@ public class EFBlocks {
 		frameAnalyzer = new FrameAnalyzer(FRAME_ANALYZER);
 		GameRegistry.registerBlock(frameAnalyzer, FRAME_ANALYZER);
 		GameRegistry.registerTileEntity(TileEntityFrameAnalyzer.class, "frameAnalyzerTileEntity");
+		
+		extraCarpenter = new ExtraCarpenter(EXTRA_CARPENTER);
+		GameRegistry.registerBlock(extraCarpenter, EXTRA_CARPENTER);
+		GameRegistry.registerTileEntity(TileEntityExtraCarpenter.class, "extraCarpenterTileEntity");
 	}
 	
 }

@@ -1,6 +1,9 @@
 package com.mishin870.exforbidden.proxy;
 
 import com.mishin870.exforbidden.EFBlocks;
+import com.mishin870.exforbidden.forestrycomp.extra_carpenter.ExtraCarpenterBlockItemRenderer;
+import com.mishin870.exforbidden.forestrycomp.extra_carpenter.ExtraCarpenterRenderer;
+import com.mishin870.exforbidden.forestrycomp.extra_carpenter.TileEntityExtraCarpenter;
 import com.mishin870.exforbidden.forestrycomp.frame_analyzer.FrameAnalyzerBlockItemRenderer;
 import com.mishin870.exforbidden.forestrycomp.frame_analyzer.FrameAnalyzerRenderer;
 import com.mishin870.exforbidden.forestrycomp.frame_analyzer.TileEntityFrameAnalyzer;
@@ -23,6 +26,9 @@ public class ClientProxy extends CommonProxy {
 	public void registerRenderers() {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFrameAnalyzer.class, new FrameAnalyzerRenderer());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(EFBlocks.frameAnalyzer), new FrameAnalyzerBlockItemRenderer(new FrameAnalyzerRenderer(), new TileEntityFrameAnalyzer()));
+		
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityExtraCarpenter.class, new ExtraCarpenterRenderer());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(EFBlocks.extraCarpenter), new ExtraCarpenterBlockItemRenderer(new ExtraCarpenterRenderer(), new TileEntityExtraCarpenter()));
 	}
 	
 	@Override
@@ -33,6 +39,7 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void postInit(FMLPostInitializationEvent e) {
 		super.postInit(e);
+		//MinecraftForge.EVENT_BUS.register(new EFRenderGUIHandler());
 	}
 	
 }

@@ -1,7 +1,6 @@
 package com.mishin870.exforbidden.api.gui.widgets;
 
 import com.mishin870.exforbidden.api.ICVisContainer;
-import com.mishin870.exforbidden.props.EFTextures;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import net.minecraft.client.Minecraft;
@@ -19,9 +18,9 @@ public class VisWidget extends Widget {
 	private final ICVisContainer tile;
 	private IIcon icon;
 	
-	public VisWidget(GuiContainer gui, ICVisContainer tile) {
+	public VisWidget(GuiContainer gui, ICVisContainer tile, IIcon icon) {
 		super(gui, WidgetColors.VIS, "vis", true);
-		this.icon = EFTextures.getImage("efwidget.vis");
+		this.icon = icon;
 		this.tile = tile;
 		Minecraft mc = FMLClientHandler.instance().getClient().getMinecraft();
 		this.maxHeight = 20 + mc.fontRenderer.FONT_HEIGHT * 7;

@@ -13,6 +13,8 @@ public class EFEventHandler {
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public void handleTextureRemap(TextureStitchEvent.Pre event) {
+		//регистрируем отдельные картинки в общем процессе создания текстурного атласа игрой
+		//это способ создать картинки БЕЗ создания предмета
 		//0 = blocks, 1 = items
 		if (event.map.getTextureType() == 1) {
 			EFTextures.init(event.map);

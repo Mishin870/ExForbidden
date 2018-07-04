@@ -3,9 +3,9 @@ package com.mishin870.exforbidden.net;
 import java.io.DataInputStream;
 import java.io.IOException;
 
-import com.mishin870.exforbidden.EFLogger;
 import com.mishin870.exforbidden.Main;
 import com.mishin870.exforbidden.forestrycomp.transdim_apiary.TileEntityTransdimensionalApiary;
+import com.mishin870.exforbidden.utils.EFLogger;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -27,7 +27,7 @@ public class NetworkPacketHandler {
 	}
 	
 	public static enum PacketType {
-		UNKNOWN, TRANSDIMENSIONAL_APIARY_CHARGE_UPDATE, CONTAINER_UPDATE_ERRORS;
+		UNKNOWN, TRANSDIMENSIONAL_APIARY_CHARGE_UPDATE, CONTAINER_UPDATE_ERRORS, FLUID_TANK_UPDATE;
 	}
 	
 	public NetworkPacketHandler() {
@@ -80,6 +80,9 @@ public class NetworkPacketHandler {
 			packet.process(player);
 		} else if (eventId == PacketType.CONTAINER_UPDATE_ERRORS.ordinal()) {
 			PacketContainerUpdateErrors packet = new PacketContainerUpdateErrors(data);
+			packet.process(player);
+		} else if (eventId == PacketType.FLUID_TANK_UPDATE.ordinal()) {
+			PacketFluidTankUpdate packet = new PacketFluidTankUpdate(data);
 			packet.process(player);
 		}
 	}

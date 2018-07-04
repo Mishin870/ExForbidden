@@ -3,10 +3,11 @@ item.frame_test.name=Test frame
 item.biome_stabilizer.name=Biome stabilizer
 
 #Blocks
-tile.alveary_lighter.name=Magic hive lighter
+tile.alveary_lighter.name=Magic alveary lighter
 tile.transdimensional_apiary.name=Transdimensional apiary
 tile.essentia_container.name=Essentia container
 tile.frame_analyzer.name=Frame analyzer
+tile.extra_carpenter.name=Improved carpenter
 
 #Creative tab
 itemGroup.ExForbidden=Ex Forbidden
