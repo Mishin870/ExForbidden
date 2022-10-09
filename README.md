@@ -1,7 +1,7 @@
 # ExForbidden
 Mod for minecraft 1.7.10, which adds analogues to various popular things that are prohibited on SkyBlock servers with the ExNihilo mod and improves the gameplay of some mods
 
-#### Requierements
+#### Requirements
 * Minecraft 1.7.10
 * JDK 1.7 / 1.8
 
